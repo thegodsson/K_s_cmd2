@@ -1,0 +1,166 @@
+    1  apt-get update && apt-get install -y apt-transport-https curl
+    2  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+    3  sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+    4  apt-get update
+    5  sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+    6  systemctl enable kubelet
+    7  ip a
+    8  vim /etc/hosts
+    9  apt-get install bash-completion
+   10  echo "source <(kubectl completion bash)" >> ~/.bashrc
+   11  source .bashrc 
+   12  kubeadm init --apiserver-advertise-address=192.168.56.101  --node-name $HOSTNAME --pod-network-cidr=10.244.0.0/16
+   13  mkdir -p $HOME/.kube
+   14  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   15  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   16  ls
+   17  ls -a
+   18  ls -la
+   19  sysctl net.bridge.bridge-nf-call-iptables=1
+   20  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+   21  kubectl edit cm -n kube-system kube-flannel-cfg
+   22  kubectl get pod --all-namespaces 
+   23  kubectl get pod --all-namespaces  -o wide
+   24  kubectl get nodes 
+   25  kubectl get nodes  -o wide
+   26  kubectl get nodes 
+   27  ls
+   28  git clone https://github.com/kubernetes-sigs/metrics-server/tree/release-0.3
+   29  git clone https://github.com/kubernetes-sigs/metrics-server.git
+   30  ls
+   31  ls metrics-server/
+   32  ls metrics-server/deploy/
+   33  rm -rf metrics-server
+   34  git clone https://github.com/kubernetes-sigs/metrics-server/tree/release-0.3
+   35  git clone https://github.com/kubernetes-sigs/metrics-server/tree/release-0.3.git
+   36  mkdir deploy_metrics-server
+   37  cd deploy_metrics-server/
+   38  ls
+   39  cd ..
+   40  git clone https://github.com/kubernetes-sigs/metrics-server.git
+   41  ls
+   42  cd metrics-server/
+   43  ls
+   44  ls -l
+   45  cd ..
+   46  ls
+   47  rm -rf metrics-server/
+   48  cd deploy_metrics-server/
+   49  ls
+   50  touch aggregated-metrics-reader.yaml
+   51  touch auth-delegator.yaml
+   52  touch auth-reader.yaml
+   53  touch metrics-apiservice.yaml
+   54  touch metrics-server-deployment.yaml
+   55  touch metrics-server-service.yaml
+   56  touch resource-reader.yaml
+   57  ls -l
+   58  vim aggregated-metrics-reader.yaml 
+   59  vim auth-delegator.yaml 
+   60  vim aggregated-metrics-reader.yaml 
+   61  vim auth-reader.yaml 
+   62  ls
+   63  vim aggregated-metrics-reader.yaml 
+   64  vim auth-delegator.yaml 
+   65  vim auth-reader.yaml 
+   66  ls -l
+   67  vim auth-reader.yaml 
+   68  vim metrics-apiservice.yaml 
+   69  vim metrics-server-deployment.yaml 
+   70  vim metrics-server-service.yaml 
+   71  vim resource-reader.yaml 
+   72  ls
+   73  cd ..
+   74  cp -rf deploy_metrics-server save_deploy_metrics-server
+   75  cd deploy_metrics-server/
+   76  vim metrics-server-deployment.yaml 
+   77  ls
+   78  kubectl apply -f .
+   79  vim resource-reader.yaml 
+   80  vim rauth-delegator.yaml
+   81  ls
+   82  vim auth-delegator.yaml 
+   83  ls -l
+   84  vim aggregated-metrics-reader.yaml 
+   85  vim auth-delegator.yaml 
+   86  vim auth-reader.yaml 
+   87  vim metrics-apiservice.yaml 
+   88  vim metrics-server-deployment.yaml 
+   89  vim metrics-server-service.yaml 
+   90  vim resource-reader.yaml 
+   91  kubectl apply -f .
+   92  vim resource-reader.yaml 
+   93  kubectl apply -f metrics-server-deployment.yaml 
+   94  kubectl get pods -n kube-system 
+   95  kubectl top node
+   96  ls
+   97  kubectl delete deploy metrics-server -n kube-system 
+   98  kubectl get apiservices.apiregistration.k8s.io 
+   99  kubectl get apiservices.apiregistration.k8s.io | grep metrics
+  100  kubectl get apiservices.apiregistration.k8s.io | grep metric
+  101  ls
+  102  kubectl apply -f .
+  103  kubectl apply -f . --validate=false
+  104  kubectl get pods -n kube-system 
+  105  kubectl top node
+  106  kubectl get apiservices.apiregistration.k8s.io | grep metric
+  107  kubectl top node
+  108  cd ~
+  109  ls
+  110  history 
+  111  history | more
+  112  ls -la
+  113  mkdir -p /srv/data
+  114  vim /srv/data/index.html
+  115  ls
+  116  vim pod.yml
+  117  kubectl apply -f pod.yml 
+  118  kubectl get pods
+  119  kubectl get pods -o wide
+  120  curl 10.244.1.4
+  121  ls
+  122  mv pod.yml pod_hostPath.yml 
+  123  vim pod_hostPath.yml 
+  124  cp -p pod_hostPath.yml pod_emptyDir.yml 
+  125  vim pod_emptyDir.yml 
+  126  vim pod_hostPath.yml 
+  127  vim pod_emptyDir.yml 
+  128  ls
+  129  kubectl get pods
+  130  kubectl delete pods monpod
+  131  vim pod_emptyDir.yml 
+  132  kubectl apply -f pod_emptyDir.yml 
+  133  vim pod_emptyDir.yml 
+  134  kubectl apply -f pod_emptyDir.yml 
+  135  vim pod_emptyDir.yml 
+  136  kubectl apply -f pod_emptyDir.yml 
+  137  vim pod_emptyDir.yml 
+  138  kubectl apply -f pod_emptyDir.yml 
+  139  vim pod_emptyDir.yml 
+  140  kubectl apply -f pod_emptyDir.yml 
+  141  kubectl apply -f pod_hostPath.yml 
+  142  kubectl delete pods monpod
+  143  kubectl apply -f pod_emptyDir.yml 
+  144  vim pod_emptyDir.yml 
+  145  kubectl get pods
+  146  kubectl get pods --all
+  147  kubectl delete pods --all
+  148  vim pod_emptyDir.yml 
+  149  kubectl apply -f pod_emptyDir.yml 
+  150  vim pod_emptyDir.yml 
+  151  kubectl apply -f pod_emptyDir.yml 
+  152  kubectl get pods 
+  153  kubectl get pods -o wide
+  154  vim pod_emptyDir.yml 
+  155  kubectl get pods -o wide
+  156  vim pod_emptyDir.yml 
+  157  kubectl get pods
+  158  kubectl delete pods monpod
+  159  kubectl apply -f pod_emptyDir.yml 
+  160  kubectl get pods
+  161  kubectl get pods -o wide
+  162  vim pod_emptyDir.yml 
+  163  ls
+  164  git init .
+  165  git commit -m "first commit"
+  166  history > cmd_k8s.txt
