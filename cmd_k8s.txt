@@ -164,3 +164,11 @@
   164  git init .
   165  git commit -m "first commit"
   166  history > cmd_k8s.txt
+  167  vim cmd_k8s.txt 
+  168  git add .
+  169  git commit -m "first commit"
+  170  git remote add origin https://github.com/thegodsson/K_s_cmd2.git
+  171  git push -u origin master
+  172  ls
+  173  kubectl exec -ti monpod -c mondebian /bin/bash
+  174  history > cmd_k8s.txt
