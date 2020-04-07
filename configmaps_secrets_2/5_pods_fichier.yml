@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: monpod
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - mountPath: /usr/share/nginx/html/
+      name: monvolumeconfig
+   
+  volumes:
+  - name: monvolumeconfig
+    configMap:
+      name: hello
+      items:
+      - key: clef
+        path: index.html
+

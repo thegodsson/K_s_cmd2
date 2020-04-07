@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: monpod
+spec:
+  containers:
+    - name: test-container
+      image: k8s.gcr.io/busybox
+      command: [ "/bin/sh", "-c", "env" ]
+      env:
+        - name: NOM
+          valueFrom:
+            configMapKeyRef:
+              name: personne
+              key: nom
+          
+        - name: PASSION
+          valueFrom:
+            configMapKeyRef:
+              name: personne
+              key: passion
