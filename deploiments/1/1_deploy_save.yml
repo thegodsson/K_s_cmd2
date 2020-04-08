@@ -19,15 +19,10 @@ spec:
         name: podfront
         ports:
         - containerPort: 80
-        volume:
-        - mountPath: /usr/share/nginx/html
-        hostPath:
-          path: /srv/data
-          type: Directory
-        #readinessProbe:
-          #httpGet:
-             #path: /
-             #port: 80
-          #initialDelaySeconds: 5
-          #periodSeconds: 5
-          #successThreshold: 1
+        readinessProbe:
+          httpGet:
+             path: /
+             port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          successThreshold: 1

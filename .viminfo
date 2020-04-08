@@ -11,10 +11,10 @@
 ~MSle0~/service
 
 # Command Line History (newest to oldest):
-:wq
-:q!
 :q
+:wq
 :1
+:q!
 :qq
 :set nu
 
@@ -29,168 +29,153 @@
 
 # Registers:
 "0	LINE	0
-	apiVersion: v1
-	kind: PersistentVolume
-	metadata:
-	  name: pv3
-	spec:
-	  storageClassName: manual
-	  capacity:
-	    storage: 100Mi
-	  accessModes:
-	    - ReadWriteOnce
-	  hostPath:
-	    path: "/pvdata4"
-	---
+	  #type: ClusterIP
 "1	LINE	0
-	  serviceName: svc-dns 
+	        name: monvolume
 "2	LINE	0
-	        
-"3	LINE	0
-	 
-"4	LINE	0
-	  
-"5	LINE	0
-	 i
-"6	LINE	0
-	
-"7	LINE	0
 	
+"3	LINE	0
+	    nodePort: 31991
+"4	LINE	0
+	  serviceName: svc-dns 
+"5	LINE	0
+	        
+"6	LINE	0
+	 
+"7	LINE	0
+	  
 "8	LINE	0
-	  minReadySeconds: 10
+	 i
 "9	LINE	0
-	  namespace: default
+	
 ""-	CHAR	0
-	/
+	s
 
 # File marks:
-'0  6  21  ~/stateful/2_ngnix.yml
-'1  1  0  ~/stateful/2_ngnix.yml
-'2  3  0  ~/stateful/2_ngnix.yml
-'3  34  0  ~/stateful/2_ngnix.yml
-'4  46  0  ~/stateful/1_pv.yml
-'5  64  0  ~/stateful/1_pv.yml
-'6  7  0  ~/stateful/2_ngnix.yml
-'7  29  17  ~/stateful/2_ngnix.yml
-'8  65  0  ~/stateful/1_pv.yml
-'9  78  0  ~/stateful/1_pv.yml
+'0  1  0  ~/stateful/4_headless.yml
+'1  32  0  ~/stateful/2_sts.yml
+'2  1  0  ~/stateful/1_pv.yml
+'3  1  0  ~/cas_pratique_pv_pvc/cas1/2_pvc_nfs.yml
+'4  1  0  ~/cas_pratique_pv_pvc/cas1/1_pv_nfs.yml
+'5  1  0  ~/cas_pratique_pv_pvc/cas1/3_pod_mysql.yml
+'6  3  0  ~/cas_pratique_pv_pvc/cas1/3_pod_mysql_V2.yml
+'7  1  0  ~/cas_pratique_pv_pvc/cas1/3_pod_mysql
+'8  1  0  ~/cas_pratique_pv_pvc/cas2/debian.yml
+'9  17  0  ~/cas_pratique_pv_pvc/cas2/nginx.yml
 
 # Jumplist (newest first):
+-'  1  0  ~/stateful/4_headless.yml
+-'  32  0  ~/stateful/2_sts.yml
+-'  1  0  ~/stateful/2_sts.yml
+-'  1  0  ~/stateful/1_pv.yml
+-'  1  0  ~/cas_pratique_pv_pvc/cas1/2_pvc_nfs.yml
+-'  1  0  ~/cas_pratique_pv_pvc/cas1/1_pv_nfs.yml
+-'  1  0  ~/cas_pratique_pv_pvc/cas1/3_pod_mysql.yml
+-'  3  0  ~/cas_pratique_pv_pvc/cas1/3_pod_mysql_V2.yml
+-'  1  0  ~/cas_pratique_pv_pvc/cas1/3_pod_mysql_V2.yml
+-'  1  0  ~/cas_pratique_pv_pvc/cas1/3_pod_mysql
+-'  1  0  ~/cas_pratique_pv_pvc/cas2/debian.yml
+-'  17  0  ~/cas_pratique_pv_pvc/cas2/nginx.yml
+-'  1  0  ~/cas_pratique_pv_pvc/cas2/nginx.yml
+-'  31  0  ~/deploiments/2_recreate/1_deploy.yml
+-'  1  0  ~/deploiments/2_recreate/1_deploy.yml
+-'  31  0  ~/deploiments/rolling_update/4_deploy_update_version.yml
+-'  1  0  ~/deploiments/rolling_update/4_deploy_update_version.yml
+-'  36  0  ~/deploiments/rolling_update/3_deploy.yml
+-'  1  0  ~/deploiments/rolling_update/3_deploy.yml
+-'  28  0  ~/deploiments/rolling_update/2_deploy.yml
+-'  1  0  ~/deploiments/rolling_update/2_deploy.yml
+-'  28  0  ~/deploiments/rolling_update/1_deploy.yml
+-'  1  0  ~/deploiments/rolling_update/1_deploy.yml
+-'  22  0  ~/deploiments/1/1_deploy.yml
+-'  1  0  ~/deploiments/1/1_deploy.yml
+-'  23  12  ~/deploiments/1/1_deploy.yml
+-'  26  0  ~/deploiments/1/1_deploy_save.yml
+-'  1  0  ~/deploiments/1/1_deploy_save.yml
+-'  24  8  ~/deploiments/1/1_deploy.yml
+-'  33  6  ~/deploiments/1/1_deploy.yml
+-'  1  0  ~/pv_pvs_pod/3_NFS_utilisation_du_pv_et_pvc_par_le_pod.yml
+-'  1  0  ~/deploiments/statefulset/1.yml
+-'  1  0  ~/pv_pvs_pod/2_pvc_nfs.yml
+-'  27  0  ~/deploiments/1/1_deploy.yml
+-'  17  0  ~/deploiments/1/2_service.yml
+-'  1  0  ~/deploiments/1/2_service.yml
+-'  16  2  ~/deploiments/1/2_service.yml
+-'  1  0  ~/deploiments/1/2_service
+-'  12  4  ~/deploiments/1/2_service.yml
+-'  11  3  ~/deploiments/1/2_service.yml
+-'  13  1  ~/deploiments/1/2_service.yml
+-'  28  0  ~/deploiments/1/2_deploy.yml
+-'  1  0  ~/deploiments/1/2_deploy.yml
+-'  1  0  ~/pv_pvs_pod/1_pv_nfs.yml
+-'  9  0  ~/stateful/4_headless.yml
+-'  23  0  ~/stateful/2_sts.yml
+-'  65  0  ~/stateful/1_pv.yml
+-'  32  0  ~/stateful/3_sts.yml
+-'  1  0  ~/stateful/3_sts.yml
+-'  1  0  ~/pv_pvs_pod/3_utilisation_du_pv_et_pvc_par_le_pod.yml
+-'  1  0  ~/pv_pvs_pod/1_pod_persitentVolume.yml
+-'  15  0  ~/pv_pvs_pod/1_pv_nfs.yml
+-'  6  0  ~/pv_pvs_pod/1_pv_nfs.yml
+-'  31  0  ~/deploiments/1/1_deploy.yml
+-'  15  0  ~/deploiments/rolling_update/2_deploy.yml
+-'  94  0  ~/cassandra/4_sts.yml
+-'  1  0  ~/cassandra/4_sts.yml
+-'  1  0  ~/cassandra/3_service_headless.yml
+-'  1  0  ~/cassandra/2_pv.yml
+-'  1  0  ~/cassandra/1_yml
+-'  67  0  ~/cassandra/4_sts.yml
+-'  74  0  ~/cassandra/4_sts.yml
+-'  81  0  ~/cassandra/4_sts.yml
+-'  79  33  ~/cassandra/4_sts.yml
+-'  61  11  ~/cassandra/4_sts.yml
+-'  100  0  ~/cassandra/4_sts.yml
+-'  11  0  ~/cassandra/4_sts.yml
+-'  13  0  ~/cassandra/3_service.yml
+-'  1  0  ~/cassandra/3_service.yml
+-'  46  0  ~/cassandra/2_pv.yml
+-'  7  0  ~/cassandra/1_yml
+-'  13  14  ~/stateful/4_headless.yml
+-'  7  12  ~/stateful/3_ngnix.yml
+-'  1  0  ~/stateful/3_ngnix.yml
+-'  7  3  ~/stateful/2_ngnix.yml
+-'  1  0  ~/stateful/2_ngnix.yml
 -'  6  21  ~/stateful/2_ngnix.yml
 -'  5  0  ~/stateful/2_ngnix.yml
--'  1  0  ~/stateful/2_ngnix.yml
 -'  3  0  ~/stateful/2_ngnix.yml
 -'  34  0  ~/stateful/2_ngnix.yml
 -'  46  0  ~/stateful/1_pv.yml
--'  1  0  ~/stateful/1_pv.yml
 -'  64  0  ~/stateful/1_pv.yml
--'  7  0  ~/stateful/2_ngnix.yml
 -'  29  17  ~/stateful/2_ngnix.yml
--'  65  0  ~/stateful/1_pv.yml
 -'  78  0  ~/stateful/1_pv.yml
 -'  9  0  ~/stateful/1_pv.yml
 -'  90  2  ~/stateful/1_pv.yml
 -'  1  6  ~/stateful/2.yml
 -'  12  0  ~/deploiments/statefulset/1.yml
--'  1  0  ~/deploiments/statefulset/1.yml
 -'  1806  2  ~/cmd_k8s.txt
 -'  1  4  ~/cmd_k8s.txt
 -'  933  2  ~/cmd_k8s.txt
 -'  21  64  ~/deploiments/rolling_update/4_deploy_update_version.yml
--'  1  0  ~/deploiments/rolling_update/4_deploy_update_version.yml
 -'  21  45  ~/deploiments/rolling_update/3_deploy.yml
--'  1  0  ~/deploiments/rolling_update/3_deploy.yml
 -'  34  0  ~/deploiments/rolling_update/3_deploy.yml
 -'  2  0  ~/deploiments/rolling_update/3_deploy.yml
 -'  28  0  ~/deploiments/rolling_update/3_deploy.yml
 -'  24  24  ~/deploiments/rolling_update/3_deploy.yml
--'  7  0  ~/deploiments/rolling_update/3_deploy.yml
--'  13  0  ~/deploiments/rolling_update/3_deploy.yml
--'  10  0  ~/deploiments/rolling_update/3_deploy.yml
--'  36  0  ~/deploiments/rolling_update/3_deploy.yml
--'  14  22  ~/deploiments/rolling_update/3_deploy.yml
--'  16  24  ~/deploiments/rolling_update/2_deploy.yml
--'  1  0  ~/deploiments/rolling_update/2_deploy.yml
--'  1  0  ~/deploiments/rolling_update/1_deploy.yml
--'  1  0  ~/deploiments/rolling_update/2_service.yml
--'  5  0  ~/deploiments/rolling_update/1_deploy.yml
--'  28  0  ~/deploiments/rolling_update/1_deploy.yml
--'  12  10  ~/deploiments/recreate/1_deploy.yml
--'  1  0  ~/deploiments/recreate/1_deploy.yml
--'  31  0  ~/deploiments/recreate/1_deploy.yml
--'  1  0  ~/cas_pratique_pv_pvc/cas1/3_pod_mysql_V2.yml
--'  1  0  ~/cas_pratique_pv_pvc/cas1/3_pod_mysql.yml
--'  1  0  ~/cas_pratique_pv_pvc/cas1/2_pvc_nfs.yml
--'  5  0  ~/cas_pratique_pv_pvc/cas2/debian.yml
--'  1  0  ~/cas_pratique_pv_pvc/cas2/debian.yml
--'  17  0  ~/cas_pratique_pv_pvc/cas2/nginx.yml
--'  1  0  ~/cas_pratique_pv_pvc/cas2/nginx.yml
--'  1  0  ~/cas_pratique_pv_pvc/cas1/1_pv_nfs.yml
--'  17  24  ~/deploiments/2_deploy.yml
--'  1  0  ~/deploiments/2_deploy.yml
--'  22  0  ~/deploiments/1_deploy.yml
--'  1  0  ~/deploiments/1_deploy.yml
--'  1  0  ~/deploiments/2_service.yml
--'  4  0  ~/deploiments/2_service.yml
--'  14  0  ~/deploiments/2_service.yml
--'  15  0  ~/deploiments/2_service.yml
--'  1  0  ~/deploiments/1_ngnix.yml
--'  25  10  ~/deploiments/1_ngnix.yml
--'  1  0  ~/deploiments/ngnix.yml
--'  1  0  ~/configmaps_secrets_2/6_pods_repertoire.yml
--'  1  15  ~/configmaps_secrets_2/david.html
--'  1  14  ~/configmaps_secrets_2/index.html
--'  18  6  ~/configmaps_secrets_2/6_pods_repertoire.yml
--'  18  16  ~/configmaps_secrets_2/5_pods.yml
--'  1  0  ~/configmaps_secrets_2/5_pods.yml
--'  21  23  ~/configmaps_secrets_2/5_pods.yml
--'  4  12  ~/configmaps_secrets_2/4_maconf.yml
--'  1  0  ~/configmaps_secrets_2/4_maconf.yml
--'  9  16  ~/configmaps_secrets_2/4_volume_fichier.yml
--'  1  0  ~/configmaps_secrets_2/4_volume_fichier.yml
--'  12  1  ~/configmaps_secrets_2/3_pod.yml
--'  1  0  ~/configmaps_secrets_2/3_pod.yml
--'  9  48  ~/configmaps_secrets_2/3_pod.yml
--'  1  0  ~/configmaps_secrets_2/2_pod.yml
--'  11  18  ~/configmaps_secrets_2/2_pod.yml
--'  9  23  ~/configmaps_secrets_2/2_pod.yml
--'  21  25  ~/configmaps_secrets_2/2_configmap.yml
--'  1  0  ~/configmaps_secrets_2/2_configmap.yml
--'  4  7  ~/configmaps_secrets_2/configmap.yml
--'  1  0  ~/configmaps_secrets_2/configmap.yml
--'  1  0  ~/configmaps_secrets_2/1_personne.yml
--'  11  17  ~/configmaps_secrets_2/1_personne.yml
--'  10  13  /tmp/kubectl-edit-ubbno.yaml
--'  1  0  /tmp/kubectl-edit-ubbno.yaml
--'  1  0  /tmp/kubectl-edit-drke5.yaml
--'  1  0  /tmp/kubectl-edit-2405i.yaml
--'  2  8  ~/configmaps_secrets_1/maconf.cfg
--'  1  0  ~/configmaps_secrets_1/maconf.cfg
--'  1  0  ~/replicaset/3_rs_nginx.yml
--'  23  14  ~/replicaset/3_rs_nginx.yml
--'  12  15  ~/replicaset/pods.yml
--'  1  0  ~/replicaset/pods.yml
--'  22  0  ~/replicaset/rs_nginx.yml
--'  1  0  ~/replicaset/rs_nginx.yml
--'  12  17  ~/replicaset/rs_nginx.yml
--'  20  0  ~/replicaset/nginx.yml
 
 # History of marks within files (newest to oldest):
 
-> ~/stateful/2_ngnix.yml
-	"	6	21
-	^	6	22
-	.	6	21
-	+	1	19
-	+	33	24
-	+	9	12
-	+	23	38
-	+	2	8
-	+	5	0
-	+	6	21
+> ~/stateful/4_headless.yml
+	"	1	0
+	^	1	0
+	.	13	14
+	+	13	14
+
+> ~/stateful/2_sts.yml
+	"	32	0
+	^	31	0
 
 > ~/stateful/1_pv.yml
-	"	46	0
+	"	1	0
 	^	46	0
 	.	64	18
 	+	1	14
@@ -216,80 +201,27 @@
 	+	56	10
 	+	64	18
 
-> ~/stateful/2.yml
-	"	1	6
-	^	1	7
-	.	1	6
-	+	1	6
-
-> ~/deploiments/statefulset/1.yml
-	"	12	0
-	.	14	0
-	+	13	3
-	+	14	0
-
-> ~/cmd_k8s.txt
-	"	1806	2
-	^	1	6
-	.	1	5
-	+	1	5
-
-> ~/deploiments/rolling_update/4_deploy_update_version.yml
-	"	21	64
-	^	21	65
-	.	21	64
-	+	24	24
-	+	21	64
-
-> ~/deploiments/rolling_update/3_deploy.yml
-	"	21	45
-	^	21	46
-	.	21	45
-	+	24	24
-	+	14	22
-	+	16	20
-	+	24	24
-	+	6	13
-	+	16	0
-	+	15	19
-	+	21	45
-
-> ~/deploiments/rolling_update/2_deploy.yml
-	"	16	24
-	^	16	25
-	.	16	24
-	+	16	24
-
-> ~/deploiments/rolling_update/1_deploy.yml
+> ~/cas_pratique_pv_pvc/cas1/2_pvc_nfs.yml
 	"	1	0
-	^	28	0
-	.	5	0
-	+	1	19
-	+	27	29
-	+	5	0
+	^	1	0
 
-> ~/deploiments/rolling_update/2_service.yml
+> ~/cas_pratique_pv_pvc/cas1/1_pv_nfs.yml
 	"	1	0
-
-> ~/deploiments/recreate/1_deploy.yml
-	"	12	10
-	^	12	11
-	.	12	10
-	+	30	29
-	+	12	10
-
-> ~/cas_pratique_pv_pvc/cas1/3_pod_mysql_V2.yml
-	"	1	0
+	^	1	0
 
 > ~/cas_pratique_pv_pvc/cas1/3_pod_mysql.yml
 	"	1	0
 	^	1	0
 
-> ~/cas_pratique_pv_pvc/cas1/2_pvc_nfs.yml
+> ~/cas_pratique_pv_pvc/cas1/3_pod_mysql_V2.yml
+	"	3	0
+
+> ~/cas_pratique_pv_pvc/cas1/3_pod_mysql
 	"	1	0
+	^	1	0
 
 > ~/cas_pratique_pv_pvc/cas2/debian.yml
-	"	5	0
+	"	1	0
 	^	9	43
 	.	10	0
 	+	4	13
@@ -301,7 +233,7 @@
 
 > ~/cas_pratique_pv_pvc/cas2/nginx.yml
 	"	17	0
-	^	11	38
+	^	17	0
 	.	9	7
 	+	4	12
 	+	7	12
@@ -314,9 +246,189 @@
 	+	10	0
 	+	9	7
 
-> ~/cas_pratique_pv_pvc/cas1/1_pv_nfs.yml
+> ~/deploiments/2_recreate/1_deploy.yml
+	"	31	0
+
+> ~/deploiments/rolling_update/4_deploy_update_version.yml
+	"	31	0
+	^	31	0
+	.	21	64
+	+	24	24
+	+	21	64
+
+> ~/deploiments/rolling_update/3_deploy.yml
+	"	36	0
+	^	21	46
+	.	21	45
+	+	24	24
+	+	14	22
+	+	16	20
+	+	24	24
+	+	6	13
+	+	16	0
+	+	15	19
+	+	21	45
+
+> ~/deploiments/rolling_update/2_deploy.yml
+	"	28	0
+	^	28	0
+	.	16	24
+	+	16	24
+
+> ~/deploiments/rolling_update/1_deploy.yml
+	"	28	0
+	^	28	0
+	.	5	0
+	+	1	19
+	+	27	29
+	+	5	0
+
+> ~/deploiments/1/1_deploy.yml
+	"	22	0
+	.	22	14
+	+	26	24
+	+	27	8
+	+	28	10
+	+	29	13
+	+	30	13
+	+	31	10
+	+	32	10
+	+	33	10
+	+	22	17
+	+	23	39
+	+	24	6
+	+	22	7
+	+	23	7
+	+	24	0
+	+	22	14
+
+> ~/deploiments/1/1_deploy_save.yml
+	"	26	0
+	^	1	0
+
+> ~/pv_pvs_pod/3_NFS_utilisation_du_pv_et_pvc_par_le_pod.yml
+	"	1	0
+
+> ~/deploiments/statefulset/1.yml
 	"	1	0
 	^	1	0
+	.	14	0
+	+	13	3
+	+	14	0
+
+> ~/pv_pvs_pod/2_pvc_nfs.yml
+	"	1	0
+	^	1	0
+
+> ~/deploiments/1/2_service.yml
+	"	17	0
+	^	17	16
+	.	17	15
+	+	12	0
+	+	7	31
+	+	9	16
+	+	10	18
+	+	11	13
+	+	18	0
+	+	16	2
+	+	17	15
+
+> ~/deploiments/1/2_service
+	"	1	0
+
+> ~/deploiments/1/2_deploy.yml
+	"	28	0
+
+> ~/pv_pvs_pod/1_pv_nfs.yml
+	"	1	0
+	^	1	0
+
+> ~/stateful/3_sts.yml
+	"	32	0
+	^	32	0
+
+> ~/pv_pvs_pod/3_utilisation_du_pv_et_pvc_par_le_pod.yml
+	"	1	0
+
+> ~/pv_pvs_pod/1_pod_persitentVolume.yml
+	"	1	0
+
+> ~/cassandra/4_sts.yml
+	"	94	0
+	^	94	0
+	.	79	33
+	+	99	22
+	+	67	12
+	+	68	29
+	+	79	0
+	+	78	16
+	+	79	33
+
+> ~/cassandra/3_service_headless.yml
+	"	1	0
+	^	1	0
+
+> ~/cassandra/2_pv.yml
+	"	1	0
+	^	1	0
+	.	27	42
+	+	45	20
+	+	22	22
+	+	45	22
+	+	4	42
+	+	27	42
+
+> ~/cassandra/1_yml
+	"	1	0
+	^	1	0
+	.	6	39
+	+	6	39
+
+> ~/cassandra/3_service.yml
+	"	13	0
+	^	13	0
+	.	12	18
+	+	12	18
+
+> ~/stateful/3_ngnix.yml
+	"	7	12
+	^	7	13
+	.	7	12
+	+	7	12
+
+> ~/stateful/2_ngnix.yml
+	"	7	3
+	^	6	22
+	.	6	21
+	+	1	19
+	+	33	24
+	+	9	12
+	+	23	38
+	+	2	8
+	+	5	0
+	+	6	21
+
+> ~/stateful/2.yml
+	"	1	6
+	^	1	7
+	.	1	6
+	+	1	6
+
+> ~/cmd_k8s.txt
+	"	1806	2
+	^	1	6
+	.	1	5
+	+	1	5
+
+> ~/deploiments/rolling_update/2_service.yml
+	"	1	0
+
+> ~/deploiments/recreate/1_deploy.yml
+	"	12	10
+	^	12	11
+	.	12	10
+	+	30	29
+	+	12	10
 
 > ~/deploiments/2_deploy.yml
 	"	17	24
